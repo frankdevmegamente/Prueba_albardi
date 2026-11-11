@@ -21,6 +21,7 @@ $rows = $pdo->query('SELECT * FROM servicios ORDER BY id DESC')->fetchAll();
       <h2>Panel de Servicios</h2>
       <div>
         <a class="btn btn--primary" href="create.php">Nuevo Servicio</a>
+        <a class="btn btn--primary" href="../pagos/checkout.php">Pagar Servicio</a>
         <a class="btn" style="background:#e3e6ea; color:var(--text); margin-left: 8px;" href="../auth/logout.php">Cerrar Sesión</a>
       </div>
     </div>
