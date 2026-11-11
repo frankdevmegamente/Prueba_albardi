@@ -1,6 +1,8 @@
 <?php
 // backend/auth/login.php
+
 require_once __DIR__ . '/../helpers.php';
+require_once __DIR__ . '/../db.php';
 
 startSession();
 $error = '';
