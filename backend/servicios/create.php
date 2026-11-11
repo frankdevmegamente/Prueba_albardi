@@ -40,33 +40,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <section class="section">
         <div class="container">
-            <h2>Nuevo servicio</h2>
+            <div class="card-form">
+                <h2>Nuevo servicio</h2>
 
-            <?php if ($error): ?>
-                <p style="color:#c0392b"><?php echo e($error); ?></p>
-            <?php endif; ?>
+                <?php if ($error): ?>
+                    <p style="color:#c0392b"><?php echo e($error); ?></p>
+                <?php endif; ?>
 
-            <form method="post" class="form">
-                <input type="hidden" name="csrf" value="<?php echo e(csrfToken()); ?>">
+                <form method="post" class="form">
+                    <input type="hidden" name="csrf" value="<?php echo e(csrfToken()); ?>">
 
-                <div class="field">
-                    <label>Nombre</label>
-                    <input name="nombre" required>
-                </div>
+                    <div class="field">
+                        <label>Nombre</label>
+                        <input name="nombre" required>
+                    </div>
 
-                <div class="field">
-                    <label>Descripción</label>
-                    <textarea name="descripcion" rows="3"></textarea>
-                </div>
+                    <div class="field">
+                        <label>Descripción</label>
+                        <textarea name="descripcion" rows="3"></textarea>
+                    </div>
 
-                <div class="field">
-                    <label>Precio</label>
-                    <input name="precio" type="number" step="0.01" required>
-                </div>
+                    <div class="field">
+                        <label>Precio</label>
+                        <input name="precio" type="number" step="0.01" required>
+                    </div>
 
-                <button class="btn btn--primary" type="submit">Guardar</button>
-                <a href="index.php">Cancelar</a>
-            </form>
+                    <div style="margin-top: 16px;">
+                        <button class="btn btn--primary" type="submit">Guardar</button>
+                        <a href="index.php" class="btn btn--secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </body>
